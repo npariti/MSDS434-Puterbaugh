@@ -22,3 +22,5 @@
     - Enable the sections that you would like to see the data for
     - Ensure you link to the appropriate project and the dataset that you have created to house this data
     - Enabling these actually starts the process
+
+- It takes some time for the data load to kick off, so be prepared to wait if this is the first time you have enabled this.
