@@ -6,7 +6,7 @@ import pandas as pd
 
 def data_ingest(request):
   user='saputerb'
-  pao='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'
+  pao=<put your key here>
 
   github_session = requests.Session()
   github_session.auth = (user, pao)
