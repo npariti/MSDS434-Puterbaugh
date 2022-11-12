@@ -1,0 +1,42 @@
+CREATE OR REPLACE MODEL marine_mammal_sound_data.marine_mammal_classifier
+OPTIONS(MODEL_TYPE = 'DNN_CLASSIFIER',
+         ACTIVATION_FN = 'RELU',
+         BATCH_SIZE = 128,
+         DROPOUT = 0.2,
+         EARLY_STOP = FALSE ,
+         HIDDEN_UNITS = [512, 256, 128, 64],
+         INPUT_LABEL_COLS = ['label'],
+         MAX_ITERATIONS = 100,
+         OPTIMIZER = 'ADAM',
+         DATA_SPLIT_METHOD = 'AUTO_SPLIT')
+AS SELECT length,
+chroma_stft_mean,
+chroma_stft_var,
+rms_mean,
+rms_var,
+spectral_centroid_mean,
+spectral_centroid_var,
+spectral_bandwidth_mean,
+spectral_bandwidth_var,
+rolloff_mean,
+rolloff_var,
+zero_crossing_rate_mean,
+zero_crossing_rate_var,
+harmony_mean,
+harmony_var,
+perceptr_mean,
+perceptr_var,
+tempo,
+mfcc1_mean,
+mfcc1_var,
+mfcc2_mean,
+mfcc2_var,
+mfcc3_mean,
+mfcc3_var,
+mfcc4_mean,
+mfcc4_var,
+label
+FROM marine_mammal_sound_data.sound_data
+--exclude labels with very few samples
+--BQ only supports 50 labels anyways right now for neural networks
+WHERE label not in ('HarbourSeal','Commerson\'sDolphin','HoodedSeal','NewZealandFurSeal','SeaOtter');
