@@ -1,0 +1,32 @@
+{ "instances": [
+    {
+        "filename": "343682__mbari-mars__blue-whale-b-call-5x.wav",
+        "length": "0.419712365",
+        "chroma_stft_mean": "0.117196165",
+        "chroma_stft_var": "699.9039785",
+        "rms_mean": "1131.125268",
+        "rms_var": "1228.050907",
+        "spectral_centroid_mean": "0.025891756",
+        "spectral_centroid_var": "-264.9868469",
+        "spectral_bandwidth_mean": "178.9688263",
+        "spectral_bandwidth_var": "-4.073134899",
+        "rolloff_mean": "23.54455757",
+        "rolloff_var": "16.27806854",
+        "zero_crossing_rate_mean": "15.42953491",
+        "zero_crossing_rate_var": "14.79756451",
+        "harmony_mean": "4.115288258",
+        "harmony_var": "6.576324463",
+        "perceptr_mean": "0.499536842",
+        "perceptr_var": "0.892429769",
+        "tempo": "-1.613376498",
+        "mfcc1_mean": "-3.769680977",
+        "mfcc1_var": "-2.380181313",
+        "mfcc2_mean": "-2.217324018",
+        "mfcc2_var": "-1.936853766",
+        "mfcc3_mean": "-3.885749102",
+        "mfcc3_var": "-3.836360693",
+        "mfcc4_mean": "-3.123222351",
+        "mfcc4_var": "-3.150139332"
+    }
+]
+}

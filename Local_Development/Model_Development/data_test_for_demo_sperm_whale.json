@@ -1,0 +1,31 @@
+{ "instances": [{
+        "filename": "404318__mbari-mars__cachalot-sperm-whale.wav",
+        "length": "0.683583856",
+        "chroma_stft_mean": "0.0160944",
+        "chroma_stft_var": "2537.607354",
+        "rms_mean": "2733.158383",
+        "rms_var": "5890.58938",
+        "spectral_centroid_mean": "0.101915484",
+        "spectral_centroid_var": "-263.983551",
+        "spectral_bandwidth_mean": "86.2118454",
+        "spectral_bandwidth_var": "5.556107998",
+        "rolloff_mean": "32.0552063",
+        "rolloff_var": "-4.947262764",
+        "zero_crossing_rate_mean": "13.83352757",
+        "zero_crossing_rate_var": "-8.251721382",
+        "harmony_mean": "7.807394981",
+        "harmony_var": "-7.836720467",
+        "perceptr_mean": "9.65907383",
+        "perceptr_var": "-3.210715294",
+        "tempo": "11.61573505",
+        "mfcc1_mean": "-2.051388502",
+        "mfcc1_var": "12.96432972",
+        "mfcc2_mean": "-2.818068743",
+        "mfcc2_var": "10.1602459",
+        "mfcc3_mean": "-3.692974567",
+        "mfcc3_var": "10.37336254",
+        "mfcc4_mean": "-3.150325537",
+        "mfcc4_var": "8.981236458"
+    }
+]
+}

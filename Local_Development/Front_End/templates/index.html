@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MSDS 434 Puterbaugh Marine Mammal Sound Classifier</title>
+    <style>
+        h1{text-align:center;}
+    </style>
+</head>
+<body bgcolor='black' text='white'>
+<h1> 
+<b>
+<font size=15 class="text-center">
+Marine Mammal Classifier 
+</font>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Upload the sound file (.wav) to predict the marine mammal!</h2>
+<h2> You can also upload a csv file that contains the features from a converted sound file based on the documentation here (figure out link in html in git)</h2>
+<h2> Send a curl command to the API endpoint to receive json output prediction as well! </h2>
+<form action="/", method="post", enctype="multipart/form-data">
+  Upload the sound file :<input type="file" name="soundfile">
+  <p><input type="submit" value="Predict image"></p>
+</form>
+<!--<img src="{{ user_image }}" height="280px" width="400px">-->
+<p>
+<h2>
+<b> {{ prediction_text }}</b>
+</h2></p>
+</body>
+</html>
