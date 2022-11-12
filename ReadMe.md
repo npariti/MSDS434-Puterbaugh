@@ -26,7 +26,7 @@ This is a repository for the coursework and all associated files that led up to 
     - AutoML Model - Not Needed for this Implementation, BigQuery ML Custom Model is Being Utilized
     - AppEngine Based Pyton Web UI - In Progress
     - Deployment of WebUI for Public Consupmption - In Progress
-    - Continuous Deployment - In Progress, will trigger changes from GitHub Repository for WebUI
+    - Continuous Deployment - In Progress, will trigger changes from GitHub Repository for WebUI Application, separate repo.
     - Multiple Environments - In Progress
 
 ## Accessing the Cloud Deployment
