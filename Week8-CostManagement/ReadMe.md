@@ -25,6 +25,35 @@
 
 - It takes some time for the data load to kick off, so be prepared to wait if this is the first time you have enabled this.
 
+## Create a Time Series Model to Forecast Cloud Costs
+
+- Below is the code I used to created a time series forecasting model
+```
+CREATE OR REPLACE MODEL billing_data_puterbaugh.ga_arima_model
+OPTIONS
+  (model_type = 'ARIMA_PLUS',
+   time_series_timestamp_col = 'usage_start_time',
+   time_series_data_col = 'cost',
+   auto_arima = TRUE,
+   data_frequency = 'AUTO_FREQUENCY',
+   decompose_time_series = TRUE
+  ) AS
+SELECT
+  usage_start_time,
+  SUM(cost) AS cost
+FROM
+  `msds434-puterbaugh.billing_data_puterbaugh.gcp_billing_export_resource_v1_018AD1_904D4F_E20028`
+GROUP BY usage_start_time
+```
+
+- Below is a query that generates a prediction of the cost for the next 30 days, with an 80% confidence, for the project.
+```
+SELECT
+ *
+FROM
+ ML.FORECAST(MODEL billing_data_puterbaugh.ga_arima_model,
+             STRUCT(30 AS horizon, 0.8 AS confidence_level))
+```
 
 ## Billing and Budget APIs
 
