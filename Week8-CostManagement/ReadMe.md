@@ -24,3 +24,8 @@
     - Enabling these actually starts the process
 
 - It takes some time for the data load to kick off, so be prepared to wait if this is the first time you have enabled this.
+
+
+## Billing and Budget APIs
+
+- You can find documentation about interacting with Google's API's for cost management and exploration [here](https://cloud.google.com/billing/docs/apis)
