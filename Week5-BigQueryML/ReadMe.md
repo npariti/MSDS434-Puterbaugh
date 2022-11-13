@@ -69,3 +69,5 @@ WHERE label not in ('HarbourSeal','Commerson\'sDolphin','HoodedSeal','NewZealand
 
 - The model was deployed to an endpoint, named marine_mammal_classifier, via the Vertex AI console. 
     - Standard options were selected, such as using a standard machine type, routing 100% of traffic here (only 1 endpoint deployed), and 1 compute node to minimize charges.
+
+- At this point, after the model had been deployed, the model had been exposed and was available to use for generating predictions via a curl call or utilizing a scripting language such as python to pass properly formatted data into the endpoint.
