@@ -60,3 +60,12 @@ WHERE label not in ('HarbourSeal','Commerson\'sDolphin','HoodedSeal','NewZealand
 2. The model took approximately 50 minutes to train. Overall metrics were decent, however they were not as good as the model that was trained locally using Tensorflow. Put in screenshots.
 
 3. The model was exported to the cloud bucket created in week 3, and named MARINE_MAMMAL_CLASSIFIER
+
+## Deploying the Model
+
+- After the model was trained and saved, it was deployed to the Vertex AI Model Registry so that it could be later served as an endpoint.
+- The model was updated to include a vertex AI identifier, by running the following command in the cloud shell editor
+```bq update --model --vertex_ai_model_id marine_mammal_classifier_puterbaugh msds434-puterbaugh:marine_mammal_sound_data.marine_mammal_classifier```
+
+- The model was deployed to an endpoint, named marine_mammal_classifier, via the Vertex AI console. 
+    - Standard options were selected, such as using a standard machine type, routing 100% of traffic here (only 1 endpoint deployed), and 1 compute node to minimize charges.
