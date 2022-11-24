@@ -9,6 +9,7 @@
     - There are two yaml files: cloudbuild_prod and cloudbuild_dev, to allow for testing to be done from the dev branch and pushed into GCP, prior to merging with the main branch and then deploying the app to a prod environment.
 - A trigger also needs to be created in GCP that will allow for any changes to be detected and trigger a GCP Cloud Build job that will create the image and store it in your GCP Image repo.
     - These jobs can also be run manually but a trigger will allow for CI/CD as required by the project specifications.
+    - A trigger for each branch, dev and prod, nees to be created in order to establish multiple environments and automatically create images for each of them.
 
 - Link to the github repo set up for CI/CD with dev/prod branches that initiate the GCP triggers:
     - https://github.com/saputerb/MSDS434-App
@@ -27,4 +28,5 @@
     - I had several builds fail due to the container crashing because it failed to be able to receive traffic through the proper port.
     - I had several builds succeed, but needed to troubleshoot further to get the prediction app to work properly due to the nature of GCP vs my local environment.
 5. Once the build is completed successfully, you should have an image for the application that can be deployed as you see fit in your environment's configuration.
+6. The app will automatically be deployed, and you can use the link provided in the GCP environment to access it.
 
