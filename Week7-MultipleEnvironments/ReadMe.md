@@ -10,6 +10,9 @@
 - A trigger also needs to be created in GCP that will allow for any changes to be detected and trigger a GCP Cloud Build job that will create the image and store it in your GCP Image repo.
     - These jobs can also be run manually but a trigger will allow for CI/CD as required by the project specifications.
 
+- Link to the github repo set up for CI/CD with dev/prod branches that initiate the GCP triggers:
+    - https://github.com/saputerb/MSDS434-App
+
 
 
 

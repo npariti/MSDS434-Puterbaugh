@@ -1,0 +1,15 @@
+steps:
+# Steps to build a docker image for front-end microservice, push it to container registry and deploy it to cloud run.  
+- name: "gcr.io/cloud-builders/docker"
+  args: ['build', '-t', 'gcr.io/msds434-puterbaugh/front-end-microservice-dev', '-f', './Dockerfile', '.']
+- name: "gcr.io/cloud-builders/docker"
+  args: ['push', 'gcr.io/msds434-puterbaugh/front-end-microservice-dev']
+  
+- name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+  entrypoint: gcloud
+  args: ['run', 'deploy','front-end-microservice-dev', '--image','gcr.io/msds434-puterbaugh/front-end-microservice-dev', '--region','us-central1', '--platform','managed', '--port','8080', '--allow-unauthenticated']
+
+
+images:
+
+- gcr.io/msds434-puterbaugh/front-end-microservice-dev
